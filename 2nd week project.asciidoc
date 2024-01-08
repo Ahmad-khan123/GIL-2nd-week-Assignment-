@@ -1,0 +1,350 @@
++*In[27]:*+
+[source, ipython3]
+----
+def calculate_grade(score):
+    if score >=80:
+       return 'A'
+    elif score >=70:
+        return 'B'
+    elif score >=40:
+        return 'C'
+    else: 
+        return 'fail'
+    
+def main():
+    score_student1 = float(input("Enter the score first student : "))
+    score_student2 = int(input("Enter the score of second student : "))
+     # calculate the student grade using the function 
+    grade_student = calculate_grade(score_student1)
+    grade_student = calculate_grade(score_student2)
+    #print(f"first student grade: {grade.student1}")
+    print(f"First student grade: {grade_student1}")
+    print(f"second student grade: {grade.student2}")
+#if __name__ =="__"main__":
+if __name__ == "__main__":
+      main()
+    
+    
+----
+
+
++*Out[27]:*+
+----
+Enter the score first student : 78
+Enter the score of second student : 45
+
+
+    ---------------------------------------------------------------------------
+
+    NameError                                 Traceback (most recent call last)
+
+    Cell In[27], line 22
+         20 #if __name__ =="__"main__":
+         21 if __name__ == "__main__":
+    ---> 22       main()
+    
+
+    Cell In[27], line 18, in main()
+         16 grade_student = calculate_grade(score_student2)
+         17 #print(f"first student grade: {grade.student1}")
+    ---> 18 print(f"First student grade: {grade_student1}")
+         19 print(f"second student grade: {grade.student2}")
+    
+
+    NameError: name 'grade_student1' is not defined
+
+----
+
+
++*In[21]:*+
+[source, ipython3]
+----
+def calculate_grade(score):
+    if score >= 80:
+        return 'A'
+    elif score >= 70:
+        return 'B'
+    elif score >= 40:
+        return 'C'
+    else:
+        return 'Fail'
+
+def main():
+    # Get the scores for two students
+    score_student1 = float(input("Enter the score for the first student: "))
+    score_student2 = float(input("Enter the score for the second student: "))
+
+    # Calculate grades using the function
+    grade_student1 = calculate_grade(score_student1)
+    grade_student2 = calculate_grade(score_student2)
+
+    # Display the grades
+    print(f"First student grade: {grade_student1}")
+    print(f"Second student grade: {grade_student2}")
+
+if __name__ == "__main__":
+    main()
+
+----
+
+
++*Out[21]:*+
+----
+Enter the score for the first student: 90
+Enter the score for the second student: 66
+First student grade: A
+Second student grade: C
+----
+
+
++*In[ ]:*+
+[source, ipython3]
+----
+
+----
+
+
++*In[3]:*+
+[source, ipython3]
+----
+
+
+----
+
+
++*In[ ]:*+
+[source, ipython3]
+----
+import random
+
+def guess_the_number():
+    print("Welcome to the Guess the Number game!")
+    print("I'm thinking of a number between 1 and 20.")
+
+    secret_number = random.randint(1, 20)
+    attempts = 0
+
+    while True:
+        try:
+            guess = int(input("Take a guess: "))
+        except ValueError:
+            print("Please enter a valid number.")
+            continue
+
+        attempts += 1
+
+        if guess < secret_number:
+            print("Too low! Try again.")
+        elif guess > secret_number:
+            print("Too high! Try again.")
+        else:
+            print(f"Congratulations! You guessed the number in {attempts} attempts.")
+            break
+
+if __name__ == "__main__":
+    guess_the_number()
+
+----
+
+
++*Out[ ]:*+
+----
+Welcome to the Guess the Number game!
+I'm thinking of a number between 1 and 20.
+Take a guess: 12
+Too high! Try again.
+Take a guess: 45
+Too high! Try again.
+Take a guess: 3
+Too low! Try again.
+Take a guess: 8
+Too low! Try again.
+Take a guess: 9
+Too low! Try again.
+Take a guess: 8
+Too low! Try again.
+Take a guess: 7
+Too low! Try again.
+Take a guess: 6
+Too low! Try again.
+Take a guess: 5
+Too low! Try again.
+Take a guess: 4
+Too low! Try again.
+Take a guess: 7
+Too low! Try again.
+Take a guess: 5
+Too low! Try again.
+Take a guess: 4
+Too low! Try again.
+Take a guess: 3
+Too low! Try again.
+Take a guess: 3
+Too low! Try again.
+Take a guess: 8
+Too low! Try again.
+Take a guess: 9
+Too low! Try again.
+Take a guess: 00
+Too low! Try again.
+Take a guess: 56
+Too high! Try again.
+Take a guess: 45
+Too high! Try again.
+Take a guess: 4
+Too low! Try again.
+Take a guess: 43
+Too high! Try again.
+Take a guess: 34
+Too high! Try again.
+Take a guess: 67
+Too high! Try again.
+Take a guess: 89
+Too high! Try again.
+Take a guess: 65
+Too high! Try again.
+Take a guess: 45
+Too high! Try again.
+Take a guess: 98
+Too high! Try again.
+Take a guess: 65
+Too high! Try again.
+Take a guess: 43
+Too high! Try again.
+Take a guess: 56
+Too high! Try again.
+Take a guess: 87
+Too high! Try again.
+Take a guess: 54
+Too high! Try again.
+Take a guess: 34
+Too high! Try again.
+Take a guess: 67
+Too high! Try again.
+Take a guess: 56
+Too high! Try again.
+Take a guess: 4
+Too low! Try again.
+Take a guess: 44
+Too high! Try again.
+Take a guess: 35
+Too high! Try again.
+Take a guess: 34
+Too high! Try again.
+Take a guess: 
+Please enter a valid number.
+Take a guess: 34
+Too high! Try again.
+Take a guess: 43
+Too high! Try again.
+Take a guess: 25
+Too high! Try again.
+Take a guess: 23
+Too high! Try again.
+Take a guess: 12
+Too high! Try again.
+Take a guess: 45
+Too high! Try again.
+Take a guess: 65
+Too high! Try again.
+Take a guess: 23
+Too high! Try again.
+Take a guess: 12
+Too high! Try again.
+Take a guess: 54
+Too high! Try again.
+Take a guess: 32
+Too high! Try again.
+Take a guess: 87
+Too high! Try again.
+Take a guess: 5
+Too low! Try again.
+Take a guess: 65
+Too high! Try again.
+Take a guess: 47
+Too high! Try again.
+Take a guess: 75
+Too high! Try again.
+Take a guess: 54
+Too high! Try again.
+Take a guess: 56
+Too high! Try again.
+Take a guess: 5
+Too low! Try again.
+Take a guess: 467
+Too high! Try again.
+Take a guess: re
+Please enter a valid number.
+Take a guess: ew
+Please enter a valid number.
+Take a guess: ew
+Please enter a valid number.
+Take a guess: 65
+Too high! Try again.
+Take a guess: 43
+Too high! Try again.
+Take a guess: 47
+Too high! Try again.
+Take a guess: 09
+Too low! Try again.
+Take a guess: 87
+Too high! Try again.
+Take a guess: 78
+Too high! Try again.
+Take a guess: 69
+Too high! Try again.
+Take a guess: 67
+Too high! Try again.
+Take a guess: 89
+Too high! Try again.
+Take a guess: 68
+Too high! Try again.
+Take a guess: 87
+Too high! Try again.
+Take a guess: 57
+Too high! Try again.
+Take a guess: 87
+Too high! Try again.
+Take a guess: 57
+Too high! Try again.
+Take a guess: 56
+Too high! Try again.
+Take a guess: 46
+Too high! Try again.
+Take a guess: 46
+Too high! Try again.
+Take a guess: 76
+Too high! Try again.
+Take a guess: 56
+Too high! Try again.
+Take a guess: 46
+Too high! Try again.
+Take a guess: 76
+Too high! Try again.
+Take a guess: 46
+Too high! Try again.
+Take a guess: 76
+Too high! Try again.
+Take a guess: 46
+Too high! Try again.
+Take a guess: 67
+Too high! Try again.
+Take a guess: 56
+Too high! Try again.
+Take a guess: 76
+Too high! Try again.
+----
+
+
++*In[ ]:*+
+[source, ipython3]
+----
+
+----
+
+
++*In[ ]:*+
+[source, ipython3]
+----
+
+----
